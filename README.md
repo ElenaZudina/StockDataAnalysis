@@ -65,10 +65,10 @@
 
 4. Примеры кода:
 
-`ˇˇdef get_company_name(ticker):
+```def get_company_name(ticker):
     stock = yf.Ticker(ticker)
     company_name = stock.info.get('longName')
-    return company_name`ˇˇ
+    return company_name```
 
  `def get_history_data(ticker, period):
     stock = yf.Ticker(ticker)
