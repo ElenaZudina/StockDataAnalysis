@@ -56,9 +56,9 @@
 
 ## Примеры использования
 
-1. ![Начальный экран](images/start.png)
-2. ![Ввод тикера](images/ticker.png)
-3. ![Результат]{images/result.png}
+1. ![Начальный экран](images/Start.png)
+2. ![Ввод тикера](images/Ticker.png)
+3. ![Результат](images/Result.png)
 
 def get_company_name(ticker):
     stock = yf.Ticker(ticker)
