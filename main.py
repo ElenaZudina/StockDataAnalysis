@@ -6,7 +6,6 @@ from stock_analysis import get_company_name, get_current_price, get_stock_info, 
 st.title("Веб-приложение для анализа акций")
 
 ticker = st.text_input("Введите тикер акции")
-#period = st.selectbox("Выберите период данных", ["1d", "1mo", "3mo", "1y", "5y"])
 
 volume_period = "1mo"
 
@@ -14,10 +13,10 @@ if ticker:
     st.subheader(f"Информация о компании {ticker}")
 
     company_name = get_company_name(ticker)
-    st.write(f"Название компании: {company_name}")
+    st.write(f"Название компании: **{company_name}**")
 
     price = get_current_price(ticker)
-    st.write(f"{price} USD")
+    st.write(f"Цена: **{price} USD**")
 
     st.subheader(f"Изменение цены {ticker}")
     
@@ -32,10 +31,10 @@ if ticker:
 
     company_info = get_stock_info(ticker)
     for key, value in company_info.items():
-        st.write(f"{key}: {value}")
+        st.write(f"{key}: **{value}**")
 
-    average_volume = get_average_trading_volume(ticker, period=volume_period)
-    st.write(f"Средний объем торгов за последний месяц: {average_volume}")
+    average_volume = get_average_trading_volume(ticker)
+    st.write(f"Средний объем торгов за 10 дней: **{average_volume}**")
 
     st.subheader(f"Объем торгов {ticker}")
 
