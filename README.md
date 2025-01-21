@@ -68,12 +68,14 @@
 ```def get_company_name(ticker):
     stock = yf.Ticker(ticker)
     company_name = stock.info.get('longName')
-    return company_name```
+    return company_name
+```
 
- `def get_history_data(ticker, period):
+ ```def get_history_data(ticker, period):
     stock = yf.Ticker(ticker)
     data = stock.history(period=period)
-    return data`
+    return data
+```
 
 5. Пример визуализации данных    
 ![График](images/chart.png) 
