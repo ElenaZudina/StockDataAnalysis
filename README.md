@@ -2,7 +2,7 @@
 
 ## Веб-приложение: "Анализ рынка акций"
 
-Проект позволяет получить данные по акциям и провести их анализ. В дальнейшем эту информацию можно использовать для построения моделей прогнозировани.
+Проект позволяет получить данные по акциям и провести их анализ. В дальнейшем эту информацию можно использовать для построения моделей прогнозирования. Проект работает с открытыымыи данными, полученными через библиотеку Yahoo Finance. 
 
 ## Автор
 
@@ -26,13 +26,13 @@
 ## Инструкции по запуску
 
 * Python версия 3.7 и выше
-* Для работы с проектом необходим установить следующие библиотеки:
-+ yfinance
-+ streamlit
-+ pandas
-+ numpy
-+ matplotlib
-+ nbimporter
+* Для работы с проектом необходим установить следующие библиотеки и фреймворки:
++ yfinance==0.2.51
++ streamlit==1.41.1
++ pandas==2.2.3
++ numpy==2.2.0
++ matplotlib==3.10.0
++ nbimporter==0.3.4
 
 ### Установка
 
@@ -58,20 +58,25 @@
 
 1. Начало работы веб-приложения
 ![Начальный экран](images/Start.png)
-2. ![Ввод тикера](images/Ticker.png)
-3. ![Результат](images/Result.png)
+2. Ввод тикера для выбора акции
+![Ввод тикера](images/Ticker.png)
+3. Результат работы веб-приложения
+![Результат](images/Result.png)
 
-def get_company_name(ticker):
+4. Примеры кода:
+
+`def get_company_name(ticker):
     stock = yf.Ticker(ticker)
     company_name = stock.info.get('longName')
-    return company_name
+    return company_name`
 
- def get_history_data(ticker, period):
+ `def get_history_data(ticker, period):
     stock = yf.Ticker(ticker)
     data = stock.history(period=period)
-    return data
-    
-![Пример визуализации. График](images/chart.png) 
+    return data`
+
+5. Пример визуализации данных    
+![График](images/chart.png) 
 
 ## Техничекие требования
 
